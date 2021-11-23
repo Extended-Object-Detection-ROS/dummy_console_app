@@ -6,8 +6,15 @@ add_compile_options(-std=c++11)
 find_package(OpenCV REQUIRED)  
 
 set(igraph OFF)
+set(opencv_contrib OFF)
+set(zbar_lib OFF)
+set(DLib OFF)
 
-set( tinyxml_srcs tinyxml/tinyxml.cpp tinyxml/tinyxmlparser.cpp tinyxml/tinyxmlerror.cpp tinyxml/tinystr.cpp )
+set( tinyxml_srcs 
+    src/tinyxml/tinyxml.cpp 
+    src/tinyxml/tinyxmlparser.cpp 
+    src/tinyxml/tinyxmlerror.cpp 
+    src/tinyxml/tinystr.cpp )
 
 set( eod_srcs
     src/lib/ObjectBase.cpp
@@ -56,13 +63,31 @@ set( eod_srcs
     src/lib/relations/SpaceRelations.cpp
     src/lib/relations/SizeRelations.cpp
     )
-
+    
 add_executable(dummy_console_app 
     src/main.cpp
-    eod_srcs
-    tinyxml_srcs
+    ${eod_srcs}
+    ${tinyxml_srcs}
     )
 
+if(igraph)
+    target_compile_definitions(dummy_console_app PUBLIC USE_IGRAPH)
+    set( IGRAPH_INCLUDE_DIRS /usr/local/src/igraph-0.7.1/include/)
+    set( IGRAPH_LIBRARIES /usr/local/lib/libigraph.so)
+endif(igraph)
+
+
+if(DLib)
+    target_compile_definitions(dummy_console_app PUBLIC USE_DLIB)
+    add_subdirectory(/home/anton/Libs/dlib dlib_build)
+    target_link_libraries(dummy_console_app
+        dlib::dlib)        
+endif(DLib)
+
+if(zbar_lib)
+    target_compile_definitions(dummy_console_app PUBLIC USE_ZBAR)
+endif(zbar_lib)
+    
 target_include_directories(dummy_console_app
     PRIVATE    
     src/lib/include
@@ -72,8 +97,14 @@ target_include_directories(dummy_console_app
     src/lib/types/include
     ${OpenCV_INCLUDE_DIRS}
     src/tinyxml
+    ${IGRAPH_INCLUDE_DIRS}
+    ${ZBAR_INCLUDE_DIRS}
     )
     
 target_link_libraries(dummy_console_app  
     ${OpenCV_LIBRARIES}  
+    ${IGRAPH_LIBRARIES}
+    ${ZBAR_LIBRARIES}
 )
+
+
