@@ -1,5 +1,6 @@
 # dummy_console_app
-Simplest console application for basic testing of system.
+Simplest console application for basic [Extended Object Detection](https://github.com/Extended-Object-Detection-ROS) project testing.
+For more advanced version please use [QT GUI][(https://github.com/Extended-Object-Detection-ROS/qt_gui_eod).
 
 ## Install 
 (Testetd on Linux Kubuntu 20.04 LTS)
