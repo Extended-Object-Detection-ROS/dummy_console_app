@@ -44,7 +44,7 @@ make
 
 ## Run
 ```
-./dummy_console_app <path to object base XML file> <path to image to dertect> [optional: names of objects ti detect]
+./dummy_console_app <path to object base XML file> <path to image to detect> [optional: names of objects to detect]
 ```
 If no object names to detect provided then all objects in base will be detected.
 
