@@ -2,12 +2,12 @@
 
 [![GitHub issues](https://img.shields.io/github/issues/Extended-Object-Detection-ROS/dummy_console_app.svg)](https://github.com/Extended-Object-Detection-ROS/dummy_console_app/issues) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) ![OpenCV](https://img.shields.io/badge/opencv-4.2.0-blue)  
 Simplest console application for basic [Extended Object Detection](https://github.com/Extended-Object-Detection-ROS) project testing.  
-For project documentation please [follow](https://github.com/Extended-Object-Detection-ROS/wiki_english/wiki).  
+For project documentation please [follow link](https://github.com/Extended-Object-Detection-ROS/wiki_english/wiki).  
 For more advanced version please use [QT GUI](https://github.com/Extended-Object-Detection-ROS/qt_gui_eod).
 
 ## Install 
-(Testetd on Linux Kubuntu 20.04 LTS)
-It is supposed that you already have OpenCV 4.2.0 installed
+(Tested on Linux Kubuntu 20.04 LTS)
+You must have OpenCV 4.2.0 installed
 ### 1. Download repo
 ```
 git clone --recurse-submodules https://github.com/Extended-Object-Detection-ROS/dummy_console_app
