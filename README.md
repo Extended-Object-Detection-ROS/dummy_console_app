@@ -46,7 +46,7 @@ make
 ```
 ./dummy_console_app <path to object base XML file> <path to image to detect> [optional: names of objects to detect]
 ```
-If no object names to detect provided then all objects in base will be detected.
+If no object names to detect are provided then all objects in the base will be detected.
 
 
 ## Examples
