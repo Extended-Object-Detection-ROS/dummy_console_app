@@ -1,6 +1,6 @@
 # dummy_console_app
 
-[![GitHub issues](https://img.shields.io/github/issues/Extended-Object-Detection-ROS/dummy_console_app.svg)](https://github.com/Extended-Object-Detection-ROS/dummy_console_app/issues) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) ![OpenCV](https://img.shields.io/badge/opencv-4.2.0-blue)
+[![GitHub issues](https://img.shields.io/github/issues/Extended-Object-Detection-ROS/dummy_console_app.svg)](https://github.com/Extended-Object-Detection-ROS/dummy_console_app/issues) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) ![OpenCV](https://img.shields.io/badge/opencv-4.2.0-blue)  
 Simplest console application for basic [Extended Object Detection](https://github.com/Extended-Object-Detection-ROS) project testing.  
 For more advanced version please use [QT GUI](https://github.com/Extended-Object-Detection-ROS/qt_gui_eod).
 
