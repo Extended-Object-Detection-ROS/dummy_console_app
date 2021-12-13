@@ -15,7 +15,7 @@ git clone --recurse-submodules https://github.com/Extended-Object-Detection-ROS/
 
 ### 2. (Optional) install igraph library
 If you want to use Complex Object Detection
-```
+```shell
 mkdir tmp
 cd tmp
 curl -O https://igraph.org/nightly/get/c/igraph-0.7.1.tar.gz
@@ -30,11 +30,11 @@ make check
 sudo make install
 ```
 Then in file dummy_console_app/CMakeLists.txt change line 8 at
-```
+```cmake
 set(igraph ON)
 ```
 ### 3. Build application
-```
+```shell
 cd dummy_console_app
 mkdir build
 cd build
@@ -43,7 +43,7 @@ make
 ```
 
 ## Run
-```
+```shell
 ./dummy_console_app <path to object base XML file> <path to image to detect> [optional: names of objects to detect]
 ```
 If no object names to detect are provided then all objects in the base will be detected.
@@ -52,7 +52,7 @@ If no object names to detect are provided then all objects in the base will be d
 ## Examples
 You can take an object base with examples from https://github.com/Extended-Object-Detection-ROS/opencv_blog_olympics_examples  
 And perform biker detection (with igraph installed) with a command like:
-```
+```shell
 ./dummy_console_app <path opencv_blog_olympics_examples>/objectbase/ObjectBase.xml <path opencv_blog_olympics_examples>/images/judgment_day_alone_75.jpg Biker
 ```
 
