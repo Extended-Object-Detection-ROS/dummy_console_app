@@ -56,6 +56,6 @@ And perform biker detection (with igraph installed) with a command like:
 ./dummy_console_app <path opencv_blog_olympics_examples>/objectbase/ObjectBase.xml <path opencv_blog_olympics_examples>/images/judgment_day_alone_75.jpg Biker
 ```
 
-![filled gui](doc/Biker_detected.png)
+![arny example](doc/Biker_detected.png)
 
 
